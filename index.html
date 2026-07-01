@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Software Developer</title>
+  <meta name="description" content="Portfolio of Your Name, Software Developer." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Ragul Kumaran <span class="logo-accent">K</span></a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Hi there, I'm</p>
+          <h1 class="hero-title">
+            <span class="role-string">&lt;<span class="role-text" id="role-text"></span><span class="cursor">_</span>/&gt;</span>
+          </h1>
+          <p class="hero-name">Ragul Kumaran K</p>
+          <p class="hero-desc">
+            I build clean, reliable software — from front-end interfaces to
+            back-end systems. Currently sharpening my craft and looking for
+            opportunities to contribute to real-world products.
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary" id="cv-btn">Download CV</a>
+            <a href="#portfolio" class="btn btn-ghost">View Work</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-photo-frame">
+            <img src="image/Portfolio.png" alt="Portrait of Your Name" class="hero-photo" />
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO (UNDER CONSTRUCTION) ============ -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">// portfolio</p>
+          <h2 class="section-title">Selected Work</h2>
+        </div>
+
+        <div class="build-card">
+          <div class="build-card-top">
+            <span class="build-status">
+              <span class="build-status-dot"></span> Building
+            </span>
+            <span class="build-pct" id="build-pct">0%</span>
+          </div>
+
+          <div class="build-bar-track">
+            <div class="build-bar-fill" id="build-bar-fill"></div>
+          </div>
+
+          <div class="build-log" id="build-log">
+            <p class="build-log-line">$ initializing portfolio...</p>
+          </div>
+
+          <h3 class="build-heading">Projects are on the way</h3>
+          <p class="build-copy">
+            This section is actively under construction. Real projects will
+            be added here one by one — check back soon.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Your Name. Built with HTML, CSS &amp; JS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
