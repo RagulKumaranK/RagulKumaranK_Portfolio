@@ -162,4 +162,30 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     runBuildAnimation();
   }
+
+  // ============================================
+  // ABOUT SECTION – SCROLL-TRIGGERED ANIMATIONS
+  // ============================================
+  const aboutAnimEls = document.querySelectorAll(
+    '.about-photo-col, .about-header, .about-body p, .about-socials'
+  );
+
+  if (aboutAnimEls.length && 'IntersectionObserver' in window) {
+    const aboutObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = [...aboutAnimEls].indexOf(entry.target);
+            entry.target.style.animationDelay = `${idx * 0.15}s`;
+            entry.target.classList.add('visible');
+            aboutObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    aboutAnimEls.forEach((el) => aboutObserver.observe(el));
+  } else {
+    aboutAnimEls.forEach((el) => el.classList.add('visible'));
+  }
 });
